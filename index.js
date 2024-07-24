@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/posts', async (req, res) => {
     let posts = await fetchAll();
-        res.render("index", {posts});
+    res.render("index.ejs", {posts});
 })
 
 app.post('/posts', async (req, res) => {
@@ -31,13 +31,13 @@ app.post('/posts', async (req, res) => {
 })
 
 app.get('/posts/new', (req,res) => {
-    res.render("new");
+    res.render("new.ejs");
 })
 
 app.get('/posts/:id', async (req, res) => {
     let {id} = req.params;
     let post = await findPost(id);
-    res.render("single", {post});
+    res.render("single.ejs", {post});
 })
 app.patch('/posts/:id', async (req, res) => {
     let {id} = req.params;
@@ -48,7 +48,7 @@ app.patch('/posts/:id', async (req, res) => {
 app.get('/posts/:id/edit', async (req, res) => {
     let {id} = req.params;
     let post = await findPost(id);
-    res.render("edit", {post});
+    res.render("edit.ejs", {post});
 })
 
 app.delete('/posts/:id', async (req, res) => {
