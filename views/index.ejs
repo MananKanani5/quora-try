@@ -13,7 +13,6 @@
     </header>
 
     <section class="posts">
-        <% if(posts.length > 0) { %>
             <% for(post of posts){ %>
                 <div class="post">
                     <div>
@@ -30,9 +29,6 @@
                         
                     </div>
                 </div>
-            <% } %>
-        <% } else { %>
-            <p>No Posts</p>
         <% } %>
             
     </section>

@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/posts', async (req, res) => {
     let posts = await fetchAll();
-        res.render("index", {posts: posts.length > 0 ? posts : []});
+        res.render("index", {posts});
 })
 
 app.post('/posts', async (req, res) => {
