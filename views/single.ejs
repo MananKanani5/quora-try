@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Post | Quora</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <header>
+        <h1><a class="logo" href="/">Quora</a></h1>
+        <a href="/posts" class="btn-sec">See All Posts</a>
+    </header>
+    <section class="posts">
+    <div class="post">
+        <div>
+            <p class="content"><%= post.content %></p>
+            <h4 class="user">@<%= post.username %></h4>
+            <p class="date"><%= post.date %></p>
+        </div>
+        <div class="options">
+            <a href="/posts/<%= post.id %>/edit">Edit</a> |
+            <form action="/posts/<%= post.id %>?_method=DELETE" class="" method="post">
+                <button type="submit">Delete</button>
+            </form>
+            
+        </div>
+        
+    </div>
+</section>
+</body>
+</html>

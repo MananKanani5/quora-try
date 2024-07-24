@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post | Quora</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <header>
+        <h1><a class="logo" href="/">Quora</a></h1>
+        <a href="/posts" class="btn-sec">See All Posts</a>
+    </header>
+    <form action="/posts/<%= post.id %>?_method=PATCH" class="form" method="post">
+        <h1 style="text-align: left;">Edit Post</h1>
+        <input name="username" type="text" class="username" value="<%= post.username %>" disabled>
+        <textarea name="content" class="content" rows="6" required><%= post.content %></textarea>
+        <button style="margin: 0;">Update</button>
+    </form>
+</body>
+</html>

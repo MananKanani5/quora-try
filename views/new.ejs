@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post | Quora</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1><a class="logo" href="/">Quora</a></h1>
+        <a href="/posts" class="btn-sec">See All Posts</a>
+    </header>
+    <section class="newPost">
+        <form action="/posts" class="form" method="post" style="width: 60%;">
+            <h1>Create New Post</h1>
+            <input name="username" type="text" class="username" placeholder="Enter Username" required>
+            <textarea name="content" class="content" placeholder="Enter Content" rows="6" required></textarea>
+            <button>Post</button>
+        </form>
+    </section>
+</body>
+</html>
