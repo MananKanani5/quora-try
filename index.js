@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true})); //form submission
 app.set('view engine', 'ejs'); //set view engine to ejs
 app.set("views", path.join(__dirname, '/views')); //set views path
 app.use(express.static(path.join(__dirname, 'public'))); //use public folder for static files
-app.use(methodOverride('_method')) //method override for HTML forms
+app.use(methodOverride('_method')) //method override for HTML form
 
 app.get('/', (req, res) => {
     res.redirect("/posts");
